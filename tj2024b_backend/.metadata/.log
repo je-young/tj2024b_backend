@@ -1,0 +1,13 @@
+!SESSION 2024-12-14 22:08:31.874 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=21.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/song/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.java.product -keyring /Users/song/.eclipse_keyring -data /Users/song/git/tj2024b_backend/tj2024b_backend
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-14 22:08:32.455
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-14 22:08:33.064
+!MESSAGE Logback config file: /Users/song/git/tj2024b_backend/tj2024b_backend/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
