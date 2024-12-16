@@ -12,9 +12,6 @@ import java.util.Scanner;
 
 public class Example1 {		// class start
 	
-
-	
-	
 	public static void main(String[] args) {	// main start
 		
 		// [5] 각 사용자에게 입력받은 값들을 저장할 변수 선언
