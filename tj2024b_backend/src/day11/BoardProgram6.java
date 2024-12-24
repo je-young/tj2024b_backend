@@ -33,7 +33,7 @@ public class BoardProgram6 { // class s
 			System.out.println(">>> 1.등록");
 			System.out.println(">>> 2.출력");
 			System.out.println(">>> 0.프로그램 종료");
-			System.out.println(">>> 메뉴를 선택하세요 : ");
+			System.out.print(">>> 메뉴를 선택하세요! [1. 2. 0.] : ");
 			
 			Scanner scan = new Scanner(System.in);
 			int choice = scan.nextInt();
