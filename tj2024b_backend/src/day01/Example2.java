@@ -7,6 +7,7 @@ public class Example2 {
 
 		// 1. boolean 타입은 true 와 false 만 저장할 수 있다.
 		boolean bool1 = true;
+		System.out.println("bool1 : " + bool1);
 		// boolean bool2 = 3; // 오류발생 :boolean 타입에 3을 저장할 수 없다.
 		boolean bool3 = false;
 		System.out.println("bool3 : " + bool3);

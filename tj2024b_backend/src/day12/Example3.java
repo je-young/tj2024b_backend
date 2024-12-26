@@ -9,10 +9,7 @@ class Student{  // class s
 	public String studentName;
 	public int grade;
 	public String address;
-	
 	// + 생성자
-	
-	
 	// + 메소드
 	public String getStudentName() {
 		return studentName;
@@ -40,7 +37,6 @@ class Student1 { // class s
 		public void setStudentName(String name) {
 			studentName = name;
 		}
-	
 } // class end
 
 class Student2 { // class s
@@ -57,7 +53,7 @@ class Student2 { // class s
 	}
 	
 	public static int getSerialNum() {
-		int i = 10;
+		// int i = 10;
 		// return this.serialNum;
 		return serialNum;
 	}
@@ -82,14 +78,14 @@ public class Example3 { // class s
 		
 		// 인스턴스 생성
 		Student studentLee = new Student();
-		System.out.println(studentLee.serialNum); // 1000
-		studentLee.serialNum++; // 1증가
+		System.out.println(Student.serialNum); // 1000
+		Student.serialNum++; // 1증가
 		
 		// 인스턴스 생성
 		Student studentSon = new Student();
 		studentSon.setStudentName("손수경");
-		System.out.println(studentSon.serialNum); // 1001
-		System.out.println(studentLee.serialNum); // 1001
+		System.out.println(Student.serialNum); // 1001
+		System.out.println(Student.serialNum); // 1001
 		
 		System.out.println(studentSon.studentName); // 이지원
 		System.out.println(studentLee.studentName); // 손수경

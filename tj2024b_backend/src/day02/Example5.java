@@ -48,7 +48,7 @@ public class Example5 { // class 시작
         // 결과 출력
         System.out.println("[지문2] 원의 넓이: " + 원넓이);
         
-	      
+	
 	    // [지문3] 두 실수를 입력받아서 앞 실수의 값이 뒤실수의 값의 비율% 계산하여 console탭에 출력하시오.
         // 두 실수 입력받기
         System.out.print("[지문3] 첫 번째 실수를 입력하세요: ");
@@ -63,7 +63,7 @@ public class Example5 { // class 시작
         // 결과 출력
         System.out.println("[지문3] 첫 번째 실수는 두 번째 실수의 " + 실수비율 + "% 입니다.");
         
-	      
+	
 	    // [지문4] 정수를 입력받아 입력받은 값이 홀수이면 true / 짝수이면 false 로 console탭에 출력하시오.
         // 정수 입력받기
         System.out.print("[지문4] 정수를 입력하세요: ");
@@ -75,7 +75,7 @@ public class Example5 { // class 시작
         // 결과 출력
         System.out.println("[지문4] 입력받은 값이 홀수인가요? " + tf);
         
-	      
+	
 	    // [지문5] 정수를 입력받아 입력받은 값이 7의 배수이면 true / 아니면 false 로 console탭에 출력하시오.
         // 정수 입력받기
         System.out.print("[지문5] 정수를 입력하세요: ");
@@ -98,8 +98,8 @@ public class Example5 { // class 시작
         
         // 결과 출력
         System.out.println("[지문6] 입력받은 값이 홀수 이면서 7배수 인가요? " + tf3);
-      
-	      
+    
+	
 	    // [지문7] 십만원 단위의 금액을 입력받아 입력받은 금액의 지폐수를 console 출력하시오.
 	       // -> 입력 예] 356789 입력시 , 출력 예] 십만원:3장 만원:5장 천원6장 
         // 금 입력받기 
@@ -120,7 +120,7 @@ public class Example5 { // class 시작
         System.out.println("[지문7] 만원: " + 일만원권 + "장");
         System.out.println("[지문7] 천원: " + 일천원권 + "장");
         
-	      
+	
 	    // [지문8] 1차점수 와 2차점수 각각 입력받아서 
 	       // -> 총점이 150점이상이면 '합격' 아니면 '불합격' 으로 console탭에 출력하시오.
         // 1차 점수 입력받기
@@ -133,7 +133,7 @@ public class Example5 { // class 시작
         
         // 총점 계산
         int 점수합계 = 점수1 + 점수2;
-       
+    
         // 합격 여부 판단
         String 합격여부 = (점수합계 >= 150) ? "합격" : "불합격";
         
@@ -147,5 +147,6 @@ public class Example5 { // class 시작
         System.out.println("[지문8] 결과: 불합격");
         }
 		*/
-	} // main end
+        scan.close();
+    } // main end
 } // class end

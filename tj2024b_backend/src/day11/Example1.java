@@ -48,7 +48,7 @@ public class Example1 {
 				System.out.println(">> 닉네임 : ");
 				String nickname = scan.nextLine();
 				
-				memberService.registerMember(id, password, nickname);
+				memberService1.registerMember(id, password, nickname);
 				break;
 				
 			case 2:
@@ -59,7 +59,7 @@ public class Example1 {
 				System.out.println(">> 비밀번호 : ");
 				String loginPassword = scan.nextLine();
 				
-				memberService.loginMember(loginId, loginPassword);
+				memberService1.loginMember(loginId, loginPassword);
 				break;
 
 			default:

@@ -3,10 +3,10 @@ package day06; // 현재 클래스가 위치한 패키지/폴더명
 import java.util.Scanner;
 
 /*
- 	실습1 : 게시판 프로그램
- 		- 문법 : 변수, 연산자, 제어문(조건문/반복문)
- 		- 제목, 내용, 작성자 를 입력받아서 저장/출력/삭제/수정
- 		- 게시물 3개 저장하기. 게시물 1개당 제목/내용/작성자 저장소 3개 필요, 게시물3 --> 9개 필요.
+		실습1 : 게시판 프로그램
+			- 문법 : 변수, 연산자, 제어문(조건문/반복문)
+			- 제목, 내용, 작성자 를 입력받아서 저장/출력/삭제/수정
+			- 게시물 3개 저장하기. 게시물 1개당 제목/내용/작성자 저장소 3개 필요, 게시물3 --> 9개 필요.
 */
 
 public class BoardProgram1 { // class start // 	자바 모든 코드는 class안에 존재한다.
@@ -19,12 +19,13 @@ public class BoardProgram1 { // class start // 	자바 모든 코드는 class안
 	
 		while (true) { // [1] 반복문, 무한루프 // while start
 			// - [2] 출력함수, syso + 자동완성
-			System.out.println("\n\n===== 게시판 프로그램 =====");
+			System.out.println("===== 게시판 프로그램 =====");
 			System.out.print("1.등록 2.출력 : ");
 			
 			// - [3] 입력함수
-				// 1. 입력객체 : Scanner 변수명 = new Scanner( Systen.in )
-			Scanner scan = new Scanner(System.in);
+				// 1. 입력객체 : Scanner 변수명 = new Scanner( System.in )
+				Scanner scan = new Scanner(System.in);
+
 				// 2. 입력객체 이용한 입력함수 : 변수명.nextXXX();
 			int 선택메뉴 = scan.nextInt(); // - 우리가 정의한 메뉴번호 선택받기 // - 입력받은 값 저장
 			
@@ -55,10 +56,8 @@ public class BoardProgram1 { // class start // 	자바 모든 코드는 class안
 				if( 제목3 != null ) {System.out.println("> 제목 : " + 제목3 +" > 내용 : " + " > 작성자 : " + 작성자3 );}
 				// 오류자 발생하는 이유 : 변수의 초기값(처음에 변수 만들때 값을 넣는 행위-초기화) 없다. // - 지역변수가 초기값이 없으면 호출이 불가는 하다.
 			} // if end
-			
+			scan.close(); // - 입력객체 닫기
 		} // while end
-		
 	} // main end
-
 } // class end
 

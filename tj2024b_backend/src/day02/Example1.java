@@ -42,12 +42,19 @@ public class Example1 { // 클래스의 시작 // 컴파일이 번역하는 단�
 			// - 자바는 이러한 리터럴값들을 상수풀(메모리공간)이라는 곳에서 *상수*로 사용한다.
 		// - 변수는 2개 , 리터럴값 1개 
 		int num1 = 3;
+		System.out.println("num1 : " + num1);
+
 		int num2 = num1;
+		System.out.println("num2 : " + num2);
+
 		// - 변수는 2개 , 리터럴값 1개
 		char str1 = 'a';
+		System.out.println("str1 : " + str1);
+
 		char str2 = 'a';
+		System.out.println("str2 : " + str2);
 		
-	} // main함수 시작 
+	} // main함수 끝
 } // 클래스 끝 
 
 

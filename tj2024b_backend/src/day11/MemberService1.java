@@ -1,4 +1,6 @@
-package day10;
+package day11;
+
+import day10.Member;
 
 public class MemberService1 {
 	// 최대 100명의 회원을 저장할 수 있는 배열

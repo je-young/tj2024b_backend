@@ -26,7 +26,11 @@ public class Example2 { // 클래스 시작
 		int result1 = b1 + b2;
 		int result2 = b1 + s1;
 		float result3 = i1 + f1;
-		double result4 = f1 +d1;
+		double result4 = f1 + d1;
+		System.out.println("result1 : " + result1); // 30
+		System.out.println("result2 : " + result2); // 40
+		System.out.println("result3 : " + result3); // 43.14
+		System.out.println("result4 : " + result4); // 44.39
 		
 		// 2. 강제 (자료/타입)형 변환, 명시적 (자료/타입)형 변환, 캐스팅
 			// - 1. 메모리 크기가 큰것 부터 작은 순으로 변환
@@ -74,7 +78,9 @@ public class Example2 { // 클래스 시작
 		System.out.println( 문자2 + 문자3 ); // 131 , 컴퓨터는 문자를 표현하기 위해서 정수를 사용한다.
 		// +
 		short[] 문자열1 = { 'J' , 'A' , 'V' ,'A' };
-		char[] 문자열2 = { 'J' , 'A' , 'V' ,'A' };
+		char[] 문자열2 = { 'J', 'A', 'V', 'A' };
+		System.out.println(문자열1); // [S@15db9742
+		System.out.println(문자열2); // JAVA
 
 		
 		

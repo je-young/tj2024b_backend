@@ -1,7 +1,5 @@
 package day03; // 클래스가 위치한 패키지명/폴더명
 
-import java.net.Socket;
-
 public class Example1 { // 클래스 시작 
 	// 자바는 번역(컴파일)단위를 클래스 단위로 함으로써 모든 코드는 클래스안에 존재해야한다.
 
@@ -12,11 +10,13 @@ public class Example1 { // 클래스 시작
 		
 		// [1] 대입연산자 , 왼쪽 변수 = 오른쪽변수(또는 식 ) , 오른쪽 항 먼저 확인/계산
 		int age = 24; // 나이를 의미하는 age변수에 값 24를 대입함.
+		System.out.println( age ); // age변수의 값을 출력한다.
 		
 		int mathScore = 10;
 		int engScore = 20;
 		// 수학점수와 영어점수 값을 더해서 총점을 의미하는 변수에 대입한다.
-		int totalScore = mathScore + engScore; 
+		int totalScore = mathScore + engScore;
+		System.out.println( totalScore ); // 총점변수의 값을 출력한다.
 		
 		// [2] 부호연산자 , +양수 , -음수 
 		int num = 10;
@@ -56,7 +56,7 @@ public class Example1 { // 클래스 시작
 		int value2;
 		value2 = ++num2;	// num2 값이 1증가 한 후에 value2 변수에 대입한다.
 			System.out.println( value2 ); // num2 = 11 , value2=11 , 
-		value2 = num2++;	// valu2변수에 기존 num2 값이 먼저 대입한후에 num2값이 1증가 한다.
+		value2 = num2++;	// value2변수에 기존 num2 값이 먼저 대입한후에 num2값이 1증가 한다.
 			System.out.println( value2 ); // value2=11 , num2 = 12
 		value2 = --num2;	// num2 값이 1감소 한 후에 value2 변수에 대입한다.
 			System.out.println( value2 ); // num2 = 11 , value2=11 
@@ -105,7 +105,7 @@ public class Example1 { // 클래스 시작
         System.out.println( value3 ); 	//true
         System.out.println( num1 );  	// 30 
         System.out.println( i );		// 2
-        	
+        
         	// p.79 1분복습 : 1. true , 2. 50 , 3. 10
         
         // [7] 복합 대입 연산자 , += , -= , *= , /= %= 
@@ -114,7 +114,10 @@ public class Example1 { // 클래스 시작
         	// num1 = num1 + num2; ----> num1 *= num2;
       
         // [8] 조건 연산자 , 조건식 ?참결과 : 거짓결과
-        int num3 = 5 > 3 ? 10 : 20 ; // 만일 5가 3보다 크면 10대입 하고 아니면 20 대입 한다.
+				int a = 5;
+				int b = 3;
+				int num3 = a > b ? 10 : 20; // 만일 a가 b보다 크면 10대입 하고 아니면 20 대입 한다.
+				System.out.println( num3 ); // 10
         
         int fatherAge = 45;
         int motherAge = 47;
@@ -125,7 +128,7 @@ public class Example1 { // 클래스 시작
         	// P.82 1분복습 
         	// 1. isEven
         	// 2. num % 2 == 0 (짝수공식)
-        	
+        
         	// p.87페이지 연산자 우선순위(참고)
         
 	} // main함수 end 

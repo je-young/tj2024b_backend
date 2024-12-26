@@ -12,9 +12,9 @@ public class Example3 { // class s
 			// - 학생, 사람, 자동차, 주문 제외한다.
 			// - 작성후 카톡방에 제출
 		
-	} // main end
-
-} // class end
+		} // main end
+		
+	} // class end
 
 public class Computer {
 	String 제조사;
