@@ -1,5 +1,5 @@
 [ 이클립스 GITHUB 연동 ]
-	1. GITBUT 웹페이지에서 저장소(리포지토리) 만들기
+	1. GITHUB 웹페이지에서 저장소(리포지토리) 만들기
 	2. [ new repository ] 클릭 
 		1. Repository name : tj2024b_backend
 		2. Public(공개용) 체크

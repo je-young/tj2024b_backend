@@ -1,5 +1,7 @@
 package day13.boardprogram8.controller;
 
+import java.util.ArrayList;
+
 import day13.boardprogram8.model.dao.BoardDao;
 import day13.boardprogram8.model.dto.BoardDto;
 
@@ -57,5 +59,15 @@ public class BoardController { // class s
     BoardDto[] result = BoardDao.getInstance().findAll(); // [1] dao에게 모든 게시물 정보를 요청하고 응답받기.
     return result; // [2] 결과를 view에게 응답한다.
   } // findAll end
+
+  public boolean create(day14.boardprogram9.model.dto.BoardDto boardDto) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'create'");
+  }
+
+  public ArrayList<day14.boardprogram9.model.dto.BoardDto> readAll() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'readAll'");
+  }
 
 } // class end
