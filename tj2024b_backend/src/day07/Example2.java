@@ -22,66 +22,66 @@ import java.util.Scanner;
 public class Example2 { // class s
 
 	public static void main(String[] args) { // main s
+
 		// [5] 클래스 정의하기, 샘플 객체 생성, new 연산자 : 객체 생성시 사용되는 연산자
 		Product p1 = new Product();
 		p1.name = "콜라";
 		p1.price = 1000;
 		p1.stock = 10;
-		
+
 		Product p2 = new Product();
 		p2.name = "사이다";
 		p2.price = 1000;
 		p2.stock = 10;
-		
+
 		Product p3 = new Product();
 		p3.name = "콜라";
 		p3.price = 1000;
 		p3.stock = 10;
-		
+
 		while (true) { // [1] 무한루프
-			System.out.print("1.콜라 2.사이다 3.환타 4.결제 : ");  // [2] 출력함수
-			Scanner scan = new Scanner(System.in);		// [3] 입력객체
-			int choose = scan.nextInt();				// [4] 입력함수
-			if (choose == 1) { 							// 콜라 선택
-				if (p1.stock > 0) { 					// 콜라 제고가 존재하면
-					p1.stock--;							// 콜라 재고 빼기
-					p1.cart++;							// 콜라 장바구니 담기
-				}else {									// 콜라 재고가 없으면
+
+			System.out.print("1.콜라 2.사이다 3.환타 4.결제 : "); // [2] 출력함수
+			Scanner scan = new Scanner(System.in); // [3] 입력객체
+			int choose = scan.nextInt(); // [4] 입력함수
+
+			if (choose == 1) { // 콜라 선택
+				if (p1.stock > 0) { // 콜라 제고가 존재하면
+					p1.stock--; // 콜라 재고 빼기
+					p1.cart++; // 콜라 장바구니 담기
+				} else { // 콜라 재고가 없으면
 					System.out.println("콜라 재고 부족합니다.");
 				}
 			} // if end
-			else if (choose == 2) { 					// 사이다 선택
-				if (p2.stock > 0) { 					// 사이다 제고가 존재하면
-					p2.stock--;							// 사이다 재고 빼기
-					p2.cart++;							// 사이다 장바구니 담기
-				}else {									// 사이다 재고가 없으면
+			else if (choose == 2) { // 사이다 선택
+				if (p2.stock > 0) { // 사이다 제고가 존재하면
+					p2.stock--; // 사이다 재고 빼기
+					p2.cart++; // 사이다 장바구니 담기
+				} else { // 사이다 재고가 없으면
 					System.out.println("사이다 재고 부족합니다.");
 				}
 			} // else if end
-			else if (choose == 3) { 					// 환타 선택
-				if (p3.stock > 0) { 					// 환타 제고가 존재하면
-					p3.stock--;							// 환타 재고 빼기
-					p3.cart++;							// 환타 장바구니 담기
-				}else {									// 환타 재고가 없으면
+			else if (choose == 3) { // 환타 선택
+				if (p3.stock > 0) { // 환타 제고가 존재하면
+					p3.stock--; // 환타 재고 빼기
+					p3.cart++; // 환타 장바구니 담기
+				} else { // 환타 재고가 없으면
 					System.out.println("사이다 재고 부족합니다.");
 				}
 			} // else if end
-			else if (choose == 4) { 					// 결제 선택
+			else if (choose == 4) { // 결제 선택
 				int 총금액 = (p1.cart * p1.price) + (p2.cart * p2.price) + (p3.cart * p3.price);
-				System.out.printf("바구니현황 : 콜라 %2d개, 사이다 %2d개, 환타 %2d개\n총금액 : %d원\n"
-						, p1.cart, p2.cart, p3.cart, 총금액);
+				System.out.printf("바구니현황 : 콜라 %2d개, 사이다 %2d개, 환타 %2d개\n총금액 : %d원\n", p1.cart, p2.cart, p3.cart, 총금액);
 				p1.cart = 0;
 				p2.cart = 0;
 				p3.cart = 0;
 				System.out.println("===============");
-				
+
 			} // else if end
 		} // while end
 	} // main end
 } // class end
 
-//+ 멤버변수는 객체 생성시 초기화를 생략하면 자동으로 기본값이 대입된다. ( 지역변수 아니다 ).
-//+ 정수 : 0 , 실수 : 0.0 , 논리 : false , 클래스타입 : null
-//Product 객체 생성시 cart 멤버변수에는 자동으로 0이 대입된다.
-
-
+// + 멤버변수는 객체 생성시 초기화를 생략하면 자동으로 기본값이 대입된다. ( 지역변수 아니다 ).
+// + 정수 : 0 , 실수 : 0.0 , 논리 : false , 클래스타입 : null
+// Product 객체 생성시 cart 멤버변수에는 자동으로 0이 대입된다.

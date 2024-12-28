@@ -7,15 +7,15 @@ public class Book { // class s
   private String author; // 저자
 
   // 2. 생성자
-  public Book() { 
+  public Book() {
   } // 기본생성자
-  
-  public Book(String bookName, String author) { 
+
+  public Book(String bookName, String author) {
     this.bookName = bookName;
     this.author = author;
   } // 멤버변수 초기화 생성자
 
-  // 3. getter, setter
+  // 3. 메소드 getter, setter
   public String getBookName() {
     return bookName;
   }
@@ -31,8 +31,5 @@ public class Book { // class s
   public void setAuthor(String author) {
     this.author = author;
   }
-
-  // 3. getter, setter
-  
 
 } // class end
