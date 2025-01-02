@@ -1,4 +1,4 @@
-package day17_인스턴스.step4;
+package day17_인터페이스.step4;
 
 public class Example4 {
   public static void main(String[] args) {

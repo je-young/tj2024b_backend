@@ -1,4 +1,4 @@
-package day17_인스턴스.step5;
+package day17_인터페이스.step5;
 
 interface InterfaceTest2 {
   // 인터페이스의 구성멤버

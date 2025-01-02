@@ -1,4 +1,4 @@
-package day17_인스턴스.step2;
+package day17_인터페이스.step2;
 
 // 키보드 인터페이스를 사냥게임 클래스가 구현한다.
 public class 사냥게임 implements 키보드 { // class start

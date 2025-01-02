@@ -1,4 +1,4 @@
-package day17_인스턴스.step3;
+package day17_인터페이스.step3;
 
 // Car 클래스 : Tire 인터페이스 타입의 멤버변수 tire를 갖는 클래스
 class Car {

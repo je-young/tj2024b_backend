@@ -1,4 +1,4 @@
-package day17_인스턴스.step1;
+package day17_인터페이스.step1;
 
 class Tool1 implements InterfaceTest { // class start
   // [1] 클래스가 인터페이스의 추상메소드를 구현하기

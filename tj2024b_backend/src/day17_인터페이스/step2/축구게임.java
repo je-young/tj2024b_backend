@@ -1,4 +1,4 @@
-package day17_인스턴스.step2;
+package day17_인터페이스.step2;
 
 public class 축구게임 implements 키보드 {
   @Override

@@ -1,4 +1,4 @@
-package day17_인스턴스.step1;
+package day17_인터페이스.step1;
 
 public interface InterfaceTest { // class start
 

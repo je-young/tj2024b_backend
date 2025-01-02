@@ -1,4 +1,4 @@
-package day17_인스턴스.step4;
+package day17_인터페이스.step4;
 
 public interface Sell {
   // + 추상메소드

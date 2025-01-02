@@ -1,4 +1,4 @@
-package day17_인스턴스.step2;
+package day17_인터페이스.step2;
 
 // 키보드를 인터페이스로 사용하는 이유? 여러 게임(클래스)에서 키보드를 사용할 수 있도록 하기 위해서.
 public interface 키보드 {
