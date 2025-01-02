@@ -5,7 +5,7 @@ class Car {
   Tire tire; // 멤버변수
 
   public void run() {
-    this.tire.roll(); // 타이어가 회전합니다.
+    this.tire.roll();
   }
 }
 

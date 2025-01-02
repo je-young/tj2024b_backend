@@ -19,33 +19,33 @@
 
 # [1] db server 내 모든 데이터베이스 확인 
 # 데이터베이스란? 데이터집합, 표/테이블들을 모아둔 곳 
-show databases;
+SHOW DATABASES;
 
 # [2] db server 의 local path 확인 
-show variables like 'datadir';
+SHOW VARIABLES LIKE 'datadir';
 -- 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Data\\'
 
 # [3] db server 의 데이터베이스 생성하기.
 # create(생성한다뜻) database(데이터베이스) DB명 , create database DB명
-create database mydb1226;
+CREATE DATABASE mydb1226;
 
 # [4] db server 의 데이터베이스 삭제하기.
 # drop(버린다는뜻) database(데이터베이스) DB명 , drop database DB명 
-drop database mydb1226;
+DROP DATABASE mydb1226;
 
 # [4-2] 만약에 지정한 데이터베이스가 존재 하면 삭제하기
 # if(만약에) exists(존재하다)
-drop database if exists mydb1226;
+DROP DATABASE IF EXISTS mydb1226;
 
 # [5] db server 내 여러개 데이터베이스 중에 사용/활성화 할 데이터베이스 선택 
-use mydb1226;
+USE mydb1226;
 
 # 실습1 : 아래와 같이 순서대로 SQL코드를 작성하고 실행하시오. 
-drop database if exists test1; 	-- 1. 'test1' 이름의 데이터베이스가 존재하면 삭제하기 SQL 작성 
-create database test1; 			-- 2. 'test1' 이름의 데이터베이스 생성하기 SQL 작성 
-show databases;					-- 3. 서버의 전체 데이터베이스 목록 확인 SQL 작성 
-show variables like 'datadir';	-- 4. 로컬PC에 데이터베이스가 만들어졌는지 경로 확인 SQL 작성 
-use test1;						-- 5. 'test1' 이름의 데이터베이스 사용 활성화 하기 SQL 작성 
+DROP DATABASE IF EXISTS test1; 	-- 1. 'test1' 이름의 데이터베이스가 존재하면 삭제하기 SQL 작성 
+CREATE DATABASE test1; 			-- 2. 'test1' 이름의 데이터베이스 생성하기 SQL 작성 
+SHOW DATABASES;					-- 3. 서버의 전체 데이터베이스 목록 확인 SQL 작성 
+SHOW VARIABLES LIKE 'datadir';	-- 4. 로컬PC에 데이터베이스가 만들어졌는지 경로 확인 SQL 작성 
+USE test1;						-- 5. 'test1' 이름의 데이터베이스 사용 활성화 하기 SQL 작성 
 
 # 참고 : 현재 작성한 코드 파일을 sql확장자 파일 , ctrl+s
 

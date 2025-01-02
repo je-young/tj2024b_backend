@@ -19,17 +19,51 @@
 			2. DROP DATABASE IF EXISTS DB명 		: db server의 지정한 DB 존재하면 제거 
 		
 	2. DML : Data Manipulation Language 데이터베이스 조작어
-	
+		[1] insert 
+			1. 모든 속성에 값 대입 , 속성명 생략 
+				insert into 테이블명 values( 값1 , 값2 , 값3);
+			2. 특정 속성에 값 대입 , 속성명 작성
+				insert into 테이블명( 속성명1 , 속성명2 , 속성명3 ) values( 값1 , 값2 , 값3 );
+			3. 여러개의 레코드를 삽입할때
+				insert into 테이블명( 속성명1 , 속성명2 ) values( 값1 , 값2 ), ( 값1 , 값2 ), ( 값1 , 값2 )
+			주의할점 : 속성의 제약조건 에 따라 적절하게 값 대입한다.
+		
+		[2] select 
+			1. 전체 속성에 레코드 조회 , *[와일드카드]
+				select * from 테이블명;
+			2. 특정 속성에 레코드 조회 , 
+				select 속성명1 , 속성명2 from 테이블명;
+			3. 특정 속성 조건에 따른 레코드 조회
+				select * from 테이블명 where [조건절]
+		
+		[3] update 
+			1. 전체 레코드의 속성값 수정 
+				update 테이블명 set 속성명 = 새로운값;
+			2. 특정 레코드의 속성값 수정 
+				update 테이블명 set 속성명 = 새로운값 where [조건절]
+			3. 다수 속성값 수정 
+				update 테이블명 set 속성명 = 새로운값 , 속성명 = 새로운값 where [조건절]
+		
+		[4] delete 
+			1. 전체 레코드 삭제 
+				delete from 테이블명;
+			2. 특정 레코드의 삭제 
+				delete from 테이블명 where [조건절]
+				
+		* mysql workbench safe mode : 조건없이 수정/삭제가 불가능하게 안전모드 지원한다.
+			set SQL_SAFE_UPDATES = 0; 	: safe mode 끄기 
+			set SQL_SAFE_UPDATES = 1; 	: safe mode 켜기(기본값)
+		
 	3. DCL : Data Control Language 데이터베이스 제어어
 	
 	4. TCL : Transaction Control Language 트랜잭션 제어어
 	
 [데이터타입]
-	1.[정수]
+	1.[정수]	unsigned : 부호가 없다. 표현단위 2배 , 음수표현 불가능
 		tinyint		1바이트	-128 ~ +127		
         smallint	2바이트	+-3만정도			
         mediumint	3바이트	+-800만정도		
-        int			4바이트	+-21억이하
+        int			4바이트	+-21억이하	, int unsigned : 42억이하
         bingint		8바이트	+-21억이상 		
 	2.[실수]
 		float 		4바이트 	부동소수점(표현 범위 이상일 경우 오차 발생 )
@@ -56,8 +90,10 @@
 	4. auto_increment	: (MYSQL만 가능) 레코드 삽입시 순서대로 자동 번호가 삽입 된다.
 	5. primary key 		: 기본/식별키-PK , 식별 가능한 고유 값 필드 키 		, 학번/사번/주민등록번호/주문번호/제품번호 등등
 		- PK필드는  not null 과 unique 포함된다.
+		- 선언 : constraint primary key( pk필드명 )
 	6. foreign key 		: 참조/외래키-FK , 다른 테이블의 기본키를 참조하는 키	
 		- FK필드는 null 과 중복 데이터를 가질수 있다.
+		- 선언 : constraint foreign key( fk필드명 ) references 참조할테이블명( 참조할필드명 )
 		
 	* 관계형 데이터베이스의 관례적으로 기본키PK 는 테이블당 1개 이상 갖는다.
 		
