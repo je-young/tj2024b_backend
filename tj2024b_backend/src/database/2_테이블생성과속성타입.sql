@@ -1,39 +1,41 @@
 /*
 	1. [정수]
-		tinyint					1바이트					-128 ~ +127		vs byte
-        smallint				2바이트					+-3만정도			vs short
-        mediumint				3바이트					+-800만정도
-		int						4바이트					+-21억이상
-        bingint 				8바이트 					+-21억이상 		vs long 
+		TINYINT					1바이트					-128 ~ +127		vs byte
+        SMALLINT				2바이트					+-3만정도			vs short
+        MEDIUMINT				3바이트					+-800만정도
+		INT						4바이트					+-21억이상
+        BINGINT 				8바이트 					+-21억이상 		vs long 
         
 	2. [실수]
-        float 					4바이트 								부동소수점(표현 범위 이상일 경우 오차 발생)
-        double		 			8바이트 								부동소수점(표현 범위 이상일 경우 오차 발생)
-        decimal 				문자타입 								실수를 문자로 처리하는 타입, 오차 없음
+        FLOAT 					4바이트 								부동소수점(표현 범위 이상일 경우 오차 발생)
+        DOUBLE		 			8바이트 								부동소수점(표현 범위 이상일 경우 오차 발생)
+        DECIMAL 				문자타입 								실수를 문자로 처리하는 타입, 오차 없음
         
 	3. [날짜/시간]
-		date				날짜표현, 0000-00-00,					1000년 ~ 9999년
-		time 				시간표현, 00:00:00				
-        datetime 			날짜/시가표현, 0000-00-00 00:00:00
+		DATE				날짜표현, 0000-00-00,					1000년 ~ 9999년
+		TIME 				시간표현, 00:00:00				
+        DATETIME 			날짜/시가표현, 0000-00-00 00:00:00
         
 	4. [문자]
-		char(문자길이) 		문자열표현, 고정길이, 최대 255글자, char(5)			--> "유재석" --> [유] [재] [석] [ ] [ ] 2칸이 남는다.
-		varchar(문자길이)		문자열표현, 가변길이, 최대 255글자, varchar(5)		--> "유재석" --> [유] [재] [석] 남는 길이는 제거
-		text				문자열표현, 최대 6만 글자
-		longtext			문자열표현, 최대 42억개 글자, 4GB, 대용량
+		CHAR(문자길이) 		문자열표현, 고정길이, 최대 255글자, char(5)			--> "유재석" --> [유] [재] [석] [ ] [ ] 2칸이 남는다.
+		VARCHAR(문자길이)		문자열표현, 가변길이, 최대 255글자, varchar(5)		--> "유재석" --> [유] [재] [석] 남는 길이는 제거
+		TEXT				문자열표현, 최대 6만 글자
+		LONGTEXT			문자열표현, 최대 42억개 글자, 4GB, 대용량
 	
 */
 
 -- 한줄 주석
 # 한줄 주석
 /* 여러줄 주석 */
--- 실행 : 실행할 명령어에 커서를 두고 Command + Enter
+-- 실행 : 실행할 명령어에 커서를 두고 COMMAND + ENTER
+# 대문자 단축키 : COMMAND + SHIFT + U
+# 소문자 단축키 : COMMAND + SHIFT + L
 
 # [1] db server 의 전체 데이터베이스 목록 조회
-show databases;
+SHOW DATABASES;
 
 # [2] db server 의 local path 조회 
-show variables like 'datadir';
+SHOW VARIABLES LIKE 'datadir';
 
 # [3] db server 의 db 생성
 create database mydb1230;
@@ -97,9 +99,9 @@ use boardservice9;
 
 # 단계3 : 지정한 DB 의 테이블 생성하기.
 create table board(
-	title varchar(100),		# 임의로 제목은 최대 100글자로 설계 			# 자바: private String title;
-    content longtext, 		# 임의로 내용은 긴글과 사진도 넣기위해 설계		# 자바: private String content;
-    writer varchar(30)		# 임의로 작성자는 최대 30글자로 설계 			# 자바: private String writer;
+	title varchar(100),		# 임의로 제목은 최대 100글자로 설계 			    # 자바: private String title;
+    content longtext, 		# 임의로 내용은 긴글과 사진도 넣기위해 설계		     # 자바: private String content;
+    writer varchar(30)		# 임의로 작성자는 최대 30글자로 설계 			   # 자바: private String writer;
 ); # 테이블 생성 끝
 
 show tables;	# 전체 테이블 목록 조회
@@ -117,12 +119,12 @@ show tables; 	# 전체 테이블 목록 조회
 use mydb1230;
 create table testtable4(
 	# 필드명 타입 제약조건
-    필드명1 tinyint not null, 			-- 지정한 필드에는 null 을 대입할 수 없다.
-    필드명2 smallint unique, 				-- 지정한 필드에는 중복값을 대입할 수 없다.
-    필드명3 int default 10,				-- 지정한 필드에는 레코드 삽입시 값을 생략하면 자동으로 기본값이 대입된다.
-    필드명4 bigint auto_increment,		-- 지정한 필드에는 레코드 삽입시 순서대로 자동번호가 대입된다.
+    필드명1 tinyint not null, 			         # 지정한 필드에는 null 을 대입할 수 없다.
+    필드명2 smallint unique, 				     # 지정한 필드에는 중복값을 대입할 수 없다.
+    필드명3 int default 10,				         # 지정한 필드에는 레코드 삽입시 값을 생략하면 자동으로 기본값이 대입된다.
+    필드명4 bigint auto_increment,		         # 지정한 필드에는 레코드 삽입시 순서대로 자동번호가 대입된다.
     pk필드명5 double,
-    constraint primary key( pk필드명5 )	-- 지정한 필드를 pk필드로 설정 ( not null 과 unique 포함 )
+    constraint primary key( pk필드명5 )	         # 지정한 필드를 pk필드로 설정 ( not null 과 unique 포함 )
 );
 create table testtable5(
 	FK필드명1 double,
@@ -171,3 +173,84 @@ create table board(
         
 	* 제출 : 카카오톡방에 SQL 과제 코드가 존재하는 본인 git 상세주소 제출 
 */
+
+-- 키오스크 DB 설계 및 테이블 생성
+-- 데이터베이스 생성
+CREATE DATABASE kiosk_db; -- 새로운 데이터베이스 생성
+USE kiosk_db; -- 해당 데이터베이스를 사용하도록 설정
+
+-- 1. 카테고리 테이블 생성
+CREATE TABLE Category (
+    CategoryID INT AUTO_INCREMENT PRIMARY KEY, -- 각 카테고리를 고유하게 식별하는 ID
+    CategoryName VARCHAR(100) NOT NULL        -- 카테고리의 이름, NULL 값을 허용하지 않음
+);
+
+-- 디버깅 로그
+SELECT 'Category 테이블 생성 완료' AS log; -- Category 테이블 생성 확인 로그
+
+-- 2. 제품 테이블 생성
+CREATE TABLE Product (
+    ProductID INT AUTO_INCREMENT PRIMARY KEY, -- 각 제품을 고유하게 식별하는 ID
+    ProductName VARCHAR(100) NOT NULL,        -- 제품의 이름, NULL 값을 허용하지 않음
+    Price DECIMAL(10, 2) NOT NULL,            -- 제품의 가격, 소수점 이하 2자리까지 허용
+    CategoryID INT NOT NULL,                  -- 해당 제품이 속한 카테고리의 ID
+    FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID) -- 카테고리와 연결된 외래키
+);
+
+-- 디버깅 로그
+SELECT 'Product 테이블 생성 완료' AS log; -- Product 테이블 생성 확인 로그
+
+-- 3. 주문 테이블 생성
+CREATE TABLE Orders (
+    OrderID INT AUTO_INCREMENT PRIMARY KEY,   -- 각 주문을 고유하게 식별하는 ID
+    OrderDate DATETIME NOT NULL DEFAULT NOW() -- 주문이 생성된 날짜와 시간, 기본값은 현재 시간
+);
+
+-- 디버깅 로그
+SELECT 'Orders 테이블 생성 완료' AS log; -- Orders 테이블 생성 확인 로그
+
+-- 4. 주문 상세 테이블 생성
+CREATE TABLE OrderDetails (
+    OrderDetailID INT AUTO_INCREMENT PRIMARY KEY, -- 각 주문 상세 항목을 고유하게 식별하는 ID
+    OrderID INT NOT NULL,                         -- 주문 번호, Orders 테이블과 연결
+    ProductID INT NOT NULL,                       -- 제품 번호, Product 테이블과 연결
+    Quantity INT NOT NULL,                        -- 주문된 제품의 수량
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID), -- Orders 테이블의 OrderID와 연결된 외래키
+    FOREIGN KEY (ProductID) REFERENCES Product(ProductID) -- Product 테이블의 ProductID와 연결된 외래키
+);
+
+-- 디버깅 로그
+SELECT 'OrderDetails 테이블 생성 완료' AS log; -- OrderDetails 테이블 생성 확인 로그
+
+-- 예제 데이터 삽입
+-- 카테고리 데이터 삽입
+INSERT INTO Category (CategoryName) VALUES ('Beverages'), ('Snacks'), ('Desserts'); -- 기본 카테고리 데이터 추가
+
+-- 디버깅 로그
+SELECT 'Category 데이터 삽입 완료' AS log; -- 카테고리 데이터 삽입 확인 로그
+
+-- 제품 데이터 삽입
+INSERT INTO Product (ProductName, Price, CategoryID) 
+VALUES 
+('Americano', 3.50, 1), -- Beverages 카테고리의 Americano 제품
+('Latte', 4.00, 1),     -- Beverages 카테고리의 Latte 제품
+('Chips', 1.50, 2),     -- Snacks 카테고리의 Chips 제품
+('Cake', 2.50, 3);      -- Desserts 카테고리의 Cake 제품
+
+-- 디버깅 로그
+SELECT 'Product 데이터 삽입 완료' AS log; -- 제품 데이터 삽입 확인 로그
+
+-- 주문 데이터 삽입
+INSERT INTO Orders (OrderDate) VALUES (NOW()); -- 현재 시간으로 주문 데이터 추가
+
+-- 디버깅 로그
+SELECT 'Orders 데이터 삽입 완료' AS log; -- 주문 데이터 삽입 확인 로그
+
+-- 주문 상세 데이터 삽입
+INSERT INTO OrderDetails (OrderID, ProductID, Quantity) 
+VALUES 
+(1, 1, 2), -- 첫 번째 주문에 Americano 2개 주문
+(1, 3, 1); -- 첫 번째 주문에 Chips 1개 주문
+
+-- 디버깅 로그
+SELECT 'OrderDetails 데이터 삽입 완료' AS log; -- 주문 상세 데이터 삽입 확인 로그
