@@ -19,5 +19,4 @@ public class Example2 { // class start
     Dao.getInstance().delete();
 
   } // main end
-
 } // class end
