@@ -23,9 +23,9 @@ public class Example1 { // class s
 		Waiting wait2 = null;
 		Waiting wait3 = null;
 
-		try (Scanner scan = new Scanner(System.in)) {
-			while (true) { // [1] 무한루프
-				System.out.print("1.명단등록 2.명단확인 3.종료 : "); // [2] 출력
+		while (true) { // [1] 무한루프
+			System.out.print("1.명단등록 2.명단확인 : "); // [2] 출력
+			try (Scanner scan = new Scanner(System.in)) {
 				int choose = scan.nextInt(); // [3] 입력함수.
 
 				if (choose == 1) { // [4] 조건문
@@ -57,12 +57,9 @@ public class Example1 { // class s
 					if (wait3 != null) {
 						System.out.printf("인원수 %d 명, 연락처 : %s \n", wait3.count, wait3.phone);
 					}
-				} else if (choose == 3) {
-					System.out.println(">>> 프로그램 종료");
-					break;
-				}
-			} // while end
-		} // try end
+				} // else if end
+			} // try end
+		} // while end
 	} // main end
 } // class end
 // - 정수 3 를 담기 위해서는 변수 타입 무엇을 사용하나요? int byte short long

@@ -39,9 +39,10 @@ public class Example2 { // class s
 		p3.price = 1000;
 		p3.stock = 10;
 
-		try (Scanner scan = new Scanner(System.in)) {
-			while (true) { // [1] 무한루프
-				System.out.print("1.콜라 2.사이다 3.환타 4.결제 5.종료 : "); // [2] 출력함수
+		while (true) { // [1] 무한루프
+
+			System.out.print("1.콜라 2.사이다 3.환타 4.결제 : "); // [2] 출력함수
+			try (Scanner scan = new Scanner(System.in)) {
 				int choose = scan.nextInt(); // [4] 입력함수
 
 				if (choose == 1) { // 콜라 선택
@@ -76,12 +77,8 @@ public class Example2 { // class s
 					p3.cart = 0;
 					System.out.println("===============");
 				} // else if end
-				else if (choose == 5) { // 종료 선택
-					System.out.println("프로그램 종료");
-					break; // [3] 반복문 종료
-				} // else if end
-			} // while end
-		} // try end
+			} // try end
+		} // while end
 	} // main end
 } // class end
 
