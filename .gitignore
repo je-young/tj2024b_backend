@@ -1,1 +1,9 @@
-/.metadata/
+# .gitignore 파일 예시
+/.DS_Store
+/bin
+/target
+/.idea
+/.vscode
+/.settings
+/.project
+/.classpath

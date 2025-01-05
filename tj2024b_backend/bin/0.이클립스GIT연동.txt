@@ -1,0 +1,76 @@
+[ 이클립스 GITHUB 연동 ]
+	1. GITHUB 웹페이지에서 저장소(리포지토리) 만들기
+	2. [ new repository ] 클릭 
+		1. Repository name : tj2024b_backend
+		2. Public(공개용) 체크
+		[ create repository ] 클릭 
+	3. 방금 생성된 비어 있는 저장소 확인 할수 있다.
+	4. [이클립스] -> 상단메뉴[window]->[show view]-> [other]
+	5. [git] -> [git repository]
+	6. clone a git repository 클릭 -> clone URI 클릭 
+	7. 
+		URI : 클론할 깃 저장소 주소
+		user : git아이디 
+		password : *토큰
+		
+	8. [ next ] -> [ finish ] 
+	
+	9. 현재 이클립스내 프로젝트를 clone된 저장소에 공유하기 
+		1. 공유할 프로젝트폴더 오른쪽 클릭 
+		2. [ team ] -> share project
+			*주의할점 : 상단에 use create 체크 안함
+			repository : 프로젝트를 공유할 저장소 선택 
+			[ finish ]
+			* 프로젝트폴더명 옆에 [저장소명] 있으면 공유 성공 
+			
+	10. [최초로 커밋/푸시]
+		프로젝트명 오른쪽 클릭 -> team -> commit 
+		[ unstaged changes ] : 커밋 전 , 수정된 파일 +
+		[ staged changes ] : 커밋 할 파일  -
+		[commit message] : 커밋 내용 
+		- [commit and push ] 클릭 
+		
+	* 토큰 발급 ( 외부에서 github 사용시 비밀번호 대체용 )
+		1. github 홈페이지 본인 프로필 로고 클릭 -> [settings] 클릭 
+		2. 왼쪽 사이드바 메뉴 가장 하단에 [Developer Settings] 클릭 
+		3. [Personal access tokens] 클릭 
+		4. tokens (classic) 클릭 
+		5. Generate new token 클릭 -> classic
+		6. 
+			Note : 토큰 식별명 , 아무거나 
+			Expiration : 유효기간 , NO Expiration 유효기간없음 선택 
+			모든 체크 권한 하기 
+			[Generate token]	
+		7. 토큰 발급코드 : ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+		
+	
+[ 이클립스 GIT 저장소 삭제 ] 
+	1. 저장소 오른쪽 클릭
+	2. [delete]
+	3. [Delete Repository]
+	4. 삭제 옵션 모두 체크 --> [delete]
+
+[ 이클립스 GIT 저장소 변경/불러오기 ]
+	1. 상단 메뉴 -> [window]
+	2. [ SHOW VIEW ] -> [other]
+	3. [GIT] -> [GIT Repositories]
+	4. [Clone a git repository]
+	5. [clone url]
+		1. url : clone 할 저장소 링크
+		2. user : git id
+		3. password : git 토큰 번호
+		* 토큰 분실시 재발급
+	6. [next] -> [finish]
+	8.  [GIT Repositories]창에서 가져온 저장소 확인 
+	7. 저장소 아래 working Tree 폴더 확인 
+		-> working Tree 폴더 아래 프로젝트명 오른쪽 클릭 
+		-> import project 
+	
+	- commit/push 할때 서명 아이디/이메일 
+	1. 상단 메뉴 -> [window] ->  [ SHOW VIEW ] -> [terminal] -> terminal
+	2. 모니터 아이콘 클릭 -> choose terminal -> git bash -> [ok]
+		확인시 : git config --global user.name
+		변경시 : git config --global user.name 변경할git아이디
+		
+		확인시 : git config --global user.email
+		변경시 : git config --global user.email 변경할email주소 
