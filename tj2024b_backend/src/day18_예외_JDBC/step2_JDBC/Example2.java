@@ -18,5 +18,7 @@ public class Example2 { // class start
     // [delete 확인] : uno = 1 인 레코드 삭제
     Dao.getInstance().delete();
 
+    Dao.getInstance().select();
+
   } // main end
 } // class end

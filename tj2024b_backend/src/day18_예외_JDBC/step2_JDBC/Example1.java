@@ -2,6 +2,7 @@ package day18_예외_JDBC.step2_JDBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class Example1 { // class start
   public static void main(String[] args) { // main start

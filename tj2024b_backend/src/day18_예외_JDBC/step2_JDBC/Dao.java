@@ -29,8 +29,8 @@ public class Dao {
       System.out.println(">> DB연동 실패 " + e);
     }
   } // f end
-  // 2단계. private static 인스턴스 생성한다.
 
+  // 2단계. private static 인스턴스 생성한다.
   private static Dao instance = new Dao();
 
   // 3단계. 싱글톤 반환 함수.
@@ -113,4 +113,4 @@ public class Dao {
     } // c end
     System.out.println("[delete 실패]");
   } // f end
-} // class ned
+} // class end
