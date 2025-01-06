@@ -1,10 +1,12 @@
-# .gitignore 파일 예시
-/.DS_Store
 /bin
 /target
-/.idea
-/.vscode
-/.settings
-/.project
-/.classpath
-/.metadata/
+.idea
+.vscode
+.settings
+.project
+.classpath
+.metadata
+.DS_Store
+tj2024b_backend/.DS_Store
+.gitignore
+
