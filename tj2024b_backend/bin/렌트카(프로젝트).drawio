@@ -1,0 +1,174 @@
+<mxfile host="65bd71144e">
+    <diagram id="9xPavZnlOolk48ZJ7DVO" name="페이지-1">
+        <mxGraphModel dx="978" dy="1463" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="메인화면" style="rounded=1;whiteSpace=wrap;html=1;fontSize=23;fontStyle=1;fontColor=#FF3333;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="-510" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="1.렌트" style="rounded=1;whiteSpace=wrap;html=1;fontSize=23;fontColor=#66FFFF;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="-310" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="16">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="480" y="60"/>
+                            <mxPoint x="630" y="60"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="1.국산차" style="rounded=1;whiteSpace=wrap;html=1;fontSize=23;fontColor=#33FF33;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="-60" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="16">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="790" y="60"/>
+                            <mxPoint x="630" y="60"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="2.수입차" style="rounded=1;whiteSpace=wrap;html=1;fontSize=23;fontColor=#33FF33;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="-60" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="2.리스" style="rounded=1;whiteSpace=wrap;html=1;fontSize=23;fontColor=#66FFFF;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="-310" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="3.관리자" style="rounded=1;whiteSpace=wrap;html=1;fontSize=23;fontColor=#66FFFF;" vertex="1" parent="1">
+                    <mxGeometry x="840" y="-310" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="3" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="140" y="330" as="sourcePoint"/>
+                        <mxPoint x="190" y="280" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="330" y="-390"/>
+                            <mxPoint x="630" y="-390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="140" y="-230" as="sourcePoint"/>
+                        <mxPoint x="190" y="-280" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="7">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="660" y="-230" as="sourcePoint"/>
+                        <mxPoint x="630" y="-440" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="910" y="-390"/>
+                            <mxPoint x="630" y="-390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="660" y="190" as="sourcePoint"/>
+                        <mxPoint x="710" y="140" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="330" y="-160"/>
+                            <mxPoint x="480" y="-160"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="4" target="6">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="660" y="190" as="sourcePoint"/>
+                        <mxPoint x="710" y="140" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="480" y="-160"/>
+                            <mxPoint x="630" y="-160"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="5" target="6">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="660" y="190" as="sourcePoint"/>
+                        <mxPoint x="710" y="140" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="790" y="-160"/>
+                            <mxPoint x="630" y="-160"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;" edge="1" parent="1" source="16" target="19">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="브랜드 조회" style="rounded=1;whiteSpace=wrap;html=1;fontSize=23;fontColor=#33FF33;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="130" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="19" target="21">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="19" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="브랜드 선택" style="rounded=1;whiteSpace=wrap;html=1;fontSize=23;fontColor=#33FF33;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="250" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="21" target="23">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="차종 조회" style="rounded=1;whiteSpace=wrap;html=1;fontSize=23;fontColor=#33FF33;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="380" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="23" target="24">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="차종 선택" style="rounded=1;whiteSpace=wrap;html=1;fontSize=23;fontColor=#33FF33;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="500" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="24" target="25">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="등급 조회" style="rounded=1;whiteSpace=wrap;html=1;fontSize=23;fontColor=#33FF33;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="610" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="25" target="29">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="등급 선택" style="rounded=1;whiteSpace=wrap;html=1;fontSize=23;fontColor=#33FF33;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="720" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="29" target="33">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="보증금 / 선납금 / 잔존가치 / 계약기간 / 월이용료" style="rounded=1;whiteSpace=wrap;html=1;fontSize=23;fontColor=#33FF33;" vertex="1" parent="1">
+                    <mxGeometry x="370" y="827" width="520" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="33" target="37">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="1.상담신청" style="whiteSpace=wrap;html=1;fontSize=23;fontColor=#33FF33;rounded=1;" vertex="1" parent="1">
+                    <mxGeometry x="570" y="960" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="37" target="39">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="이름 / 연락처" style="whiteSpace=wrap;html=1;fontSize=23;fontColor=#33FF33;rounded=1;" vertex="1" parent="1">
+                    <mxGeometry x="530" y="1100" width="200" height="62.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="접수성공&lt;br&gt;접수번호 출력" style="whiteSpace=wrap;html=1;fontSize=23;fontColor=#33FF33;rounded=1;" vertex="1" parent="1">
+                    <mxGeometry x="540" y="1241" width="180" height="78.75" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="0.처음으로" style="whiteSpace=wrap;html=1;fontSize=23;fontColor=#33FF33;rounded=1;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="960" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="2" target="43">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="480" y="1000" as="sourcePoint"/>
+                        <mxPoint x="530" y="950" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="120" y="-480"/>
+                            <mxPoint x="120" y="990"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
