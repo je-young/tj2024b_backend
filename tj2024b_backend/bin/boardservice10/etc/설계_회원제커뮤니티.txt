@@ -1,71 +1,71 @@
 [boardservice10]
-  주제 : 회원제 커뮤니티
-  https://docs.google.com/spreadsheets/d/1jFDQFf7iIXldWPsVi7sQR1CqOUr2Vt5g6oI1y6QC17g/edit?gid=1374951649#gid=1374951649
+주제 : 회원제 커뮤니티
 
-    1. 주제선정
-    2. 주요기능들 : 회원기능 , 계층(카케고리/댓글)형 게시물기능
-    3. 세부구현들
-        - 회원기능      : 회원가입 , 로그인 , 아이디/비밀번호 찾기 , 내정보 , 회원탈퇴
-        - 게시물기능    : 쓰기 , 전체조회 , 개별조회 , 수정 , 삭제
-        - 댓글기능      : 쓰기 , 현재 게시물 댓글조회 , 댓글수정 , 댓글삭제 
-
-    4. 화면 flow chart (로직 flow 와 다름)
-
-    5. DB 설계와 샘플(스프레드시트) --> DB/Table SQL -> SAMPLE INSERT -> EDR 다이어그램
-        * 저장 데이터 파ㄱ
-            - 회원 : 회원번호_PK , 아이디 , 비밀번호 , 이름 , 연락처 , 가입일
-            - 카테고리 : 카테고리번호_PK , 제목 , 내용 , 생성일
-            - 게시물 : 게시물번호_PK , 제목 , 내용 , 조회수 , 작성일 , 회원번호_FK(작성자) , 카테고리번호_FK(카테고리명)
-            - 댓글 : 댓글번호_PK , 내용 , 작성일 , 회원번호_FK(작성자)
-        1. 데이터들 간의 관계 파악 , 1:1 , 1:M , M:M
-        2. 테이블당 PK(식별키) 1개 이상 권장
-            (회원)회원번호_PK -- (게시물)회원번호_FK[작성자 역할]
-            (회원)회원번호_PK -- (댓글)회원번호_FK[작성자 역할]
-            (카테고리)카테고리번호_PK -- (게시물)카테고리번호_FK[카테고리명 역할]
-            (게시물)게시물번호_PK -- (댓글)게시물번호_FK[댓글위치 역할]
-
-    6. REST API 명세서(스프레드시트) : Controller 매개변수/리턴값 정의서
-
-    7. JAVA 프로젝트 세팅 : 1.패키지 구성 2.클래스 구성 3.싱글톤 구성 4.DB 연동코드 5. DTO 생성 6.AppStart
-        [ 프로젝트 생성 ]
-        1. 상단 메뉴 => [file] => [new] => [java project] / 없으면[other...] => java => javaproject
-        2.
-            name : 프로젝트 관련 영문
-            JRE : JAVASE-17         ( 팀원 환경과 통일 )
-            [ finish ]
-
-        [ MVC 패키지 샘플 구성 ] : 패키지를 공란으로 하면 최초 commit / push 에 업로드가 안된다.
-            src
-                controller 패키지
-                    MemberController 클래스
-
-                model 패키지
-                    dao 패키지
-                        MemberDao 클래스
-                    dto 패키지
-                        MemberDto 클래스
-
-                view 패키지
-                    MemberView 클래스
-
-                AppStart 클래스
-
-                etc 패키지
-                    - 부가 파일들 : 설계메모.txt파일 , DBSQL.sql파일
-
-        [ 프로젝트 사용할 외부 라이브러리 ] 
-            mysql-connector-j-9.1.0.jar : JDBC(Java DataBass Connector / DB연동 라이브러리) , 파일명 통일성.
-            1. 프로젝트 필요한 라이브러리 .jar 파일들을 프로젝트안에 복사해 둔다.
-            2. 
-
-    8. 기능별 VIEW - CONTROLLER - DAO 코드 작성하기.
-        0. 그 구현할 기능의 DTO 만들기.
-            - VIEW[사용자] <----- DTO -----> DB[저장소]
-            - DTO : 서로 다른 레이어(MVC패턴) 간에 데이터를 이동하는 객체
-            - 여러가지의 데이터를 고유하게 가져야 하므로 싱글톤은 필요없다. [사람DTO]
-
-        0. 각 클래스별 싱글톤 만들기
-            - 프로그램내 인스턴스(객체) 1개만 만들수 있도록 하는 디자인 패턴
-            - MVC에서는 DAO, CONTROLLER, VIEW에서 사용할 예정이다.
-            - 싱글톤을 사용하는 이유 : 서비스를 제공하는 기능 / 함수들은 한개만 존재해도 되니까. 굳이 여러개가 필요없다.
-            - 싱글톤
+	1. 주제선정
+	2. 주요기능들 : 회원기능 , 계층(카테고리/댓글)형 게시물기능
+	3. 세부구현기능들
+		- 회원기능 		: 회원가입 , 로그인 , 아이디/비밀번호 찾기 , 내정보 , 회원탈퇴
+		- 게시물기능 		: 쓰기 , 전체조회 , 개별조회 , 수정 , 삭제 
+		- 댓글기능 		: 쓰기 , 현재게시물댓글조회 , 댓글수정 , 댓글삭제
+	4. 화면 flow chart
+	5. DB 설계와 샘플(스프레드시트) --> DB/Table SQL -> SAMPLE INSERT -> ERD다이어그램
+	6. REST API 명세서(스프레드시트) : Controller 매개변수/리턴값 정의서
+	
+	7. JAVA 프로젝트 세팅 : 1.패키지구성 2. 클래스구성 3. 싱글톤 구성 4.DB연동코드 5. DTO 생성 6. AppStart  
+		[ 프로젝트 생성 ]
+		1. 상단 메뉴 => [file] => [new] => [java project] / 없으면[other...] -> java -> javaproject
+		2. 
+			name : 프로젝트관련영문
+			JRE : JAVASE-17			( 팀원 환경과 통일 )
+			[ finish ]
+			
+		[ MVC 패키지 샘플 구성 ] : 패키지를 공란으로 하면 최초 commit/push 에 업로드가 안된다.
+			src
+				controller 패키지 
+					MemberController 클래스 
+				
+				model 패키지 
+					dao 패키지 
+						MemberDao 클래스
+					dto 패키지
+						MemberDto 클래스 
+				view 패키지 
+					MemberView 클래스 
+				
+				AppStart 클래스 
+				
+				etc 패키지 
+					- 부가 파일들 : 설계메모.txt파일 , DBSQL.sql파일 , JDBC.jar파일
+		
+		[ 프로젝트 사용할 외부 라이브러리 ]
+			mysql-connector-j-9.1.0.jar : jdbc(자바-db연동 라이브러리 ) , 파일명 통일성.
+			1. 프로젝트 필요한 라이브러리 .jar 파일들을 프로젝트내 복사해둔다.
+			2. 각 라이브러리 .jar 파일들을 오른쪽 클릭해서 [ build path ] -> [ add to build path ]
+			
+		[ 프로젝트 GIT 올리는 방법 ] : 0.이클립스GIT연동.TXT파일 참고
+		
+	8. 기능별 VIEW - CONTROLLER - DAO 코드 작성하기. 
+		0. 그 구현할 기능의 DTO 만들기.
+			- VIEW[사용자]	<----------- DTO ------------>	DB[저장소]
+			- DTO : 서로 다른 레이어(MVC패턴)들 간의 데이터를 이동하는 객체 
+			- 여러가지의 데이터들을 고유하게 가져야 하므로 싱글톤은 필요없다. [사람DTO]
+			
+		0. 각 클래스별 싱글톤 만들기.
+			- 프로그램내 인스턴스(객체) 1개만 만들 수 있도록 하는 디자인 패턴 
+			- MVC 에서는 DAO , CONTROLLER , VIEW 에서 사용할 예정이다.
+			- 왜? 서비스를 제공하는 기능/함수 들은 한개만 존재해도 되니까. 굳이 여러개가 필요없니까.[ 출석 기능 ]
+			- 싱글톤 코드 3단계
+		
+		0. DB Connect
+			- JDBC : 자바와 DB의 연동 라이브러리 
+			- DB연동코드 
+                                                                CRUD                    DML
+		1. 회원가입view - 회원가입controller - 회원가입dao          C                       insert
+        2. 아이디찾기 : view --> controller - dao                 R                       select
+        3. 비밀번호찾기 : view --> controller - dao               R                       select
+		4. 로그인 : view --> controller - 로그인dao               R                        select
+        5. 로그아웃 : view --> controller                        로직                     X
+        6. 내정보조회 : view --> controller - dao                R                         
+        7. 회원탈퇴 : view --> controller - dao                  D
+        8. 회원수정 : view --> controller - dao                  U
+        

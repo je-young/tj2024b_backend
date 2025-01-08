@@ -25,6 +25,7 @@ public class MemberDto { // DTO : 서로 다른 레이어(MVC패턴)들 간의 �
   } // constructor end
 
   public MemberDto(int mno, String mid, String mpwd, String mname, String mphone, String mdate) {
+    super();
     this.mno = mno;
     this.mid = mid;
     this.mpwd = mpwd;
@@ -91,8 +92,8 @@ public class MemberDto { // DTO : 서로 다른 레이어(MVC패턴)들 간의 �
   public void setMdate(String mdate) {
     this.mdate = mdate;
   }
-  // 자동완성 : 클래스 { } 안에서 빈칸에 오른쪽 클릭 -> [source] -> [generate toString()]
 
+  // 자동완성 : 클래스 { } 안에서 빈칸에 오른쪽 클릭 -> [source] -> [generate toString()]
   @Override
   public String toString() {
     return "MemberDto [mno=" + mno + ", mid=" + mid + ", mpwd=" + mpwd + ", mname=" + mname + ", mphone=" + mphone
