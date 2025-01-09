@@ -13,12 +13,12 @@ public class MemberDto { // DTO : 서로 다른 레이어(MVC패턴)들 간의 �
   // - 오버로딩 : 동일한 메소드명을 여러개 선언 가능 , 전제조건 : 매개변수의 타입,개수,순서
 
   // 1. 멤버변수 / 필드 / 속성 : 객체가 가질수 있는 고유한 값 을 저장하는 속성명
-  int mno; // 회원번호
-  String mid; // 회원아이디
-  String mpwd; // 회원비밀번호
-  String mname; // 회원명
-  String mphone; // 회원전화번호
-  String mdate; // 회원가입일
+  private int mno; // 회원번호
+  private String mid; // 회원아이디
+  private String mpwd; // 회원비밀번호
+  private String mname; // 회원명
+  private String mphone; // 회원전화번호
+  private String mdate; // 회원가입일
 
   // 2. 생성자 // 클래스 { } 안에서 빈칸에 오른쪽 클릭 -> [source] -> [generate constructor ]
   public MemberDto() {
@@ -98,6 +98,6 @@ public class MemberDto { // DTO : 서로 다른 레이어(MVC패턴)들 간의 �
   public String toString() {
     return "MemberDto [mno=" + mno + ", mid=" + mid + ", mpwd=" + mpwd + ", mname=" + mname + ", mphone=" + mphone
         + ", mdate=" + mdate + "]";
-  }
+  } // toString end
 
 } // MemberDto end

@@ -178,4 +178,28 @@ public class MemberDao {
       System.out.println(e);
     } // try-catch end
   } // delete end
+
+  // 8. 회원 수정 SQL 처리 메소드
+  public boolean update(MemberDto memberDto) {
+    try {
+      // [1] SQL 작성하기
+      String sql = "update member set mpwd = ?, mname = ?, mphone = ? where mno = ?";
+      // [2] DB와 연동된 곳(conn)에 SQL 기재하기
+      PreparedStatement ps = conn.prepareStatement(sql);
+      // [*] 기재된 SQL에 매개변수 값 대입하기
+      ps.setString(1, memberDto.getMpwd());
+      ps.setString(2, memberDto.getMname());
+      ps.setString(3, memberDto.getMphone());
+      ps.setInt(4, memberDto.getMno());
+      // [3] 기재된 SQL을 실행하고 결과를 받는다
+      int count = ps.executeUpdate();
+      // [4] 결과에 따른 처리 및 반활을 한다
+      if (count == 1) {
+        return true; // 수정 성공 했을때
+      }
+    } catch (SQLException e) {
+      System.out.println(e);
+    }
+    return false; // 수정 실패 했을때
+  } // update end
 } // class end
