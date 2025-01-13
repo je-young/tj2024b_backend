@@ -1,4 +1,4 @@
-package day24;
+package day24_Wrapper_String_Class;
 
 class Book {
 } // Book end
