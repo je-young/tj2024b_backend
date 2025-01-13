@@ -1,5 +1,8 @@
 package day24_Wrapper_String_Class;
 
+import java.util.Arrays;
+import java.util.Random;
+
 public class StringExample {
   public static void main(String[] args) {
 
@@ -79,6 +82,54 @@ public class StringExample {
     String javaData = htmlData.replace("<br/>", "\n");
     System.out.println(javaData); // 유재석
                                   // 안녕하세요.
+
+    // (8) .substring(시작인덱스, [끝인덱스]) : 첫번째 인덱스부터 6번 인덱스까지 문자열 추출
+    String str9 = "012345-1230123".substring(0, 6);
+    System.out.println(str9); // 012345
+
+    // 7번 인덱스부터 (끝 인덱스 생략) 마지막 인덱스 까지 추출
+    String str10 = "012345-1230123".substring(7);
+    System.out.println(str10); // 1230123
+
+    // (9) .split("구분문자") :
+    String[] str11 = "012345-1230123".split("-"); // ["012345", "1230123"]
+    System.out.println(str11[0]); // 012345
+    System.out.println(str11[1]); // 1230123
+    // [활용] : CSV 파일 다루기
+
+    // (10) .indexOf(찾는 문자열) : 문자열 찾기
+    int findIndex = "자바 프로그래밍 언어".indexOf("자바");
+    System.out.println(findIndex); // 0
+
+    // (11) .contains(찾는 문자열) : 문자열 찾기
+    boolean findBool = "자바 프로그래밍 언어".contains("자바");
+    System.out.println(findBool); // true
+
+    // (12) .getBytes() : 문자열을 비트 배열로 변환
+    byte[] str12 = "JAVA PROGRAM".getBytes();
+    System.out.println(str12); // [B@532760d8
+    System.out.println(Arrays.toString(str12)); // [74, 65, 86, 65, 32, 80, 82, 79, 71, 82, 65, 77]
+    // - 영문/일부특수문자 : 문자1개당 1바이트( 아스키코드 )
+    System.out.println("ab".getBytes().length); // 2
+    // - 한글 : 문자 1개당 2바이트( 유니코드 ) + 1바이트(utf-8규칙정보) => 3바이트
+    System.out.println("가나".getBytes().length); // 6
+    // char 2바이트 표현 short +- 32,000개 --> short unsigned 65,536개
+    // --> char 유니코드로 된 문자 1개 표현
+    // [활용] : 인증코드 만들때 사용
+    int val1 = 65;
+    int val2 = 66;
+    int val3 = 67;
+    String code = "" + (char) val1 + (char) val2 + (char) val3;
+    System.out.println(code); // ABC
+    for (int i = 0; i <= 6; i++) {
+      System.out.println(new Random()); // 랜덤(난수) 관련 클래스
+      System.out.println(new Random().nextInt()); // int 타입 난수 생성
+      System.out.println(new Random().nextInt(26)); // 0 ~ 26 사이의 랜덤(난수) 생성
+      System.out.println(new Random().nextInt(26) + 97); // 97 ~ 122 사이의 난수 반환 함수.
+      System.out.println((char) (new Random().nextInt(26) + 97)); // 난수를 문자로 변환하여 출력
+      code += (char) (new Random().nextInt(26) + 97);
+    } // for end
+    System.out.println(code); // 임의의 난수 문자열 생성
 
   } // main end
 
