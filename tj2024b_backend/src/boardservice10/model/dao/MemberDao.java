@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.naming.spi.DirStateFactory.Result;
+
 import boardservice10.model.dto.MemberDto;
 
 public class MemberDao {
@@ -202,4 +204,32 @@ public class MemberDao {
     }
     return false; // 수정 실패 했을때
   } // update end
+
+  // 9. 특정한 속성의 중복값 검색
+  // [1] 아이디 중복 검사
+  public boolean check(String field, String value) {
+    // StringBuilder builder = new StringBuilder();
+    // builder.append("select * from member where ");
+    // builder.append(field);
+    // builder.append(" = ");
+    // builder.append("'" + value + "'");
+    // System.out.println(builder.toString());
+
+    try {
+      String sql = "select * from member where ? = ?";
+      PreparedStatement ps = conn.prepareStatement(sql);
+      ps.setString(1, field);
+      ps.setString(2, value);
+      ResultSet rs = ps.executeQuery();
+      int count = ps.executeUpdate();
+      if (count == 1) {
+        return true;
+      }
+    } catch (SQLException e) {
+      System.out.println(e);
+    }
+    return false;
+  }
+
+  // [2]
 } // class end

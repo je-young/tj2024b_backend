@@ -32,14 +32,14 @@ public class BoardView {
         int state = MemberView.getInstance().myInfo();
         if (state == 0) {
           return;
-        }
-
+        } // if end
       } else if (choose == 3) {
+        write();
       } else if (choose == 4) {
         findById();
-      }
-    } // w end
-  } // f end
+      } // else if end
+    } // while end
+  } // index end
 
   // 1. 전체 게시물 조회 화면
   public void findAll() {
@@ -56,7 +56,7 @@ public class BoardView {
       System.out.print(boardDto.getBdate() + "\t");
       System.out.print(boardDto.getBtitle() + "\n");
     } // for end
-  } // f end
+  } // findAll end
 
   // 2. 개별(1개) 게시물 조회 화면
   public void findById() {
@@ -69,6 +69,86 @@ public class BoardView {
         "\t" + result.getBview() + "\t" + result.getBdate());
     System.out.println(result.getBtitle());
     System.out.println(result.getBcontent());
+
     // -- 추후에 댓글 출력되는 코드
-  } // f end
+    while (true) {
+      System.out.print("1.뒤로가기 2.댓글작성(구현X) 3.수정 4.삭제 : ");
+      int choose = scan.nextInt();
+      if (choose == 1) {
+        break;
+      } else if (choose == 2) {
+      } else if (choose == 3) {
+        update(result.getBno());
+      } else if (choose == 4) {
+        delete(result.getBno());
+      } // if end
+    } // while end
+  } // findById end
+
+  // 5. 게시물 수정 화면
+  public void update(int bno) {
+    System.out.print(">> 수정할 제목 : ");
+    String btitle = scan.next();
+    System.out.print(">> 수정할 내용 : ");
+    String bcontent = scan.next();
+
+    // BoardDto 객체를 생성
+    BoardDto boardDto = new BoardDto();
+    boardDto.setBno(bno);
+    boardDto.setBtitle(btitle);
+    boardDto.setBcontent(bcontent);
+
+    // 1. 컨트롤러에게 요청하고 결과를 받는다.
+    boolean result = BoardController.getInstance().update(boardDto);
+
+    // 2. 결과에 따라 출력
+    if (result) {
+      System.out.println(">> 수정성공");
+    } else {
+      System.out.println(">> 수정실패");
+    } // if end
+  } // update end
+
+  // 6. 게시물 삭제 화면
+  public void delete(int bno) {
+    boolean result = BoardController.getInstance().delete(bno);
+    if (result) {
+      System.out.println(">> 삭제성공");
+    } else {
+      System.out.println(">> 삭제실패");
+    } // if end
+  } // delete end
+
+  // 3.게시물 작성 화면
+  public void write() {
+    // 카테고리 전체 조회
+    System.out.println("카테고리 번호 : ");
+    int cbo = scan.nextInt();
+    System.out.println("제목 : ");
+    String btitle = scan.next();
+    System.out.println("내용 : ");
+    String bcontent = scan.next();
+
+    BoardDto boardDto = new BoardDto();
+    boardDto.setCno(cbo);
+    boardDto.setBtitle(btitle);
+    boardDto.setBcontent(bcontent);
+    boolean result = BoardController.getInstance().write(boardDto);
+    if (result) {
+      System.out.println("글쓰기 성공");
+    } else {
+      System.out.println("글쓰기 실패");
+    } // if end
+  } // write end
+
+  // 4. 카테고리 전체 조회 화면
+  public void categoryAll() {
+    ArrayList<BoardDto> result = BoardController.getInstance().categoryAll();
+    for (int index = 0; index <= result.size() - 1; index++) {
+      BoardDto boardDto = result.get(index);
+      System.out.printf("번호 : %d 카테고리명 : %s \n",
+          boardDto.getCno(), boardDto.getCname());
+    } // for end
+  } // category end
+
 } // class end

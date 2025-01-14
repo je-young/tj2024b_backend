@@ -73,5 +73,77 @@ public class BoardDao extends Dao {
       System.out.println(e);
     }
     return null;
-  } // f end
+  } // findById end
+
+  // 3. 게시물 쓰기 SQL 처리 메소드
+  public boolean write(BoardDto boardDto) {
+    try {
+      String sql = "insert into board(btitle, bcontent, mno, cno) values(?, ?, ?, ?)";
+      PreparedStatement ps = conn.prepareStatement(sql);
+      ps.setString(1, boardDto.getBtitle());
+      ps.setString(2, boardDto.getBcontent());
+      ps.setInt(3, boardDto.getMno());
+      ps.setInt(4, boardDto.getCno());
+      int count = ps.executeUpdate();
+      if (count == 1) {
+        return true;
+      }
+    } catch (SQLException e) {
+      System.out.println(e);
+    } // try-catch end
+    return false;
+  } // write end
+
+  // 4. 카테고리 전체 조회 SQL 처리 메소드
+  public ArrayList<BoardDto> categoryAll() {
+    ArrayList<BoardDto> list = new ArrayList<BoardDto>();
+    try {
+      String sql = "select * from category";
+      PreparedStatement ps = conn.prepareStatement(sql);
+      ResultSet rs = ps.executeQuery();
+      while (rs.next()) {
+        BoardDto boardDto = new BoardDto();
+        boardDto.setCno(rs.getInt("cno"));
+        boardDto.setCname(rs.getString("cname"));
+        list.add(boardDto);
+      } // while end
+    } catch (SQLException e) {
+      System.out.println(e);
+    } // try-catch end
+    return list;
+  } // categoryAll end
+
+  // 5. 게시물 수정 SQL 처리 메소드
+  public boolean update(BoardDto boardDto) {
+    try {
+      String sql = "update board set btitle = ?, bcontent = ? where bno = ?";
+      PreparedStatement ps = conn.prepareStatement(sql);
+      ps.setString(1, boardDto.getBtitle());
+      ps.setString(2, boardDto.getBcontent());
+      ps.setInt(3, boardDto.getBno());
+      int count = ps.executeUpdate();
+      if (count == 1) {
+        return true;
+      }
+    } catch (SQLException e) {
+      System.out.println(e);
+    } // try-catch end
+    return false;
+  } // update end
+
+  // 6. 게시물 삭제 SQL 처리 메소드
+  public boolean delete(int bno) {
+    try {
+      String sql = "delete from board where bno = ?";
+      PreparedStatement ps = conn.prepareStatement(sql);
+      ps.setInt(1, bno);
+      int count = ps.executeUpdate();
+      if (count == 1) {
+        return true;
+      }
+    } catch (SQLException e) {
+      System.out.println(e);
+    } // try-catch end
+    return false;
+  } // delete end
 } // class end
