@@ -146,4 +146,24 @@ public class BoardDao extends Dao {
     } // try-catch end
     return false;
   } // delete end
+
+  // 8. 내가쓴글 확인 SQL 처리 메소드
+  // 매개변수 : bno , mno , 특정 게시물(bno)의 작성자(mno) 일치 여부 확인하기.
+  public boolean writeCheck(int bno, int mno) {
+    try {
+      String sql = "select * from board where bno = ? and mno = ?";
+      PreparedStatement ps = conn.prepareStatement(sql);
+      ps.setInt(1, bno);
+      ps.setInt(2, mno);
+      ResultSet rs = ps.executeQuery();
+      if (rs.next()) {
+        return true;
+      }
+    } catch (SQLException e) {
+      System.out.println(e);
+    } // try-catch end
+    return false;
+
+  } // writeCheck end
+
 } // class end
